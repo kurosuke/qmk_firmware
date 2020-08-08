@@ -10,11 +10,11 @@ Hardware Availability: [RE5 Repository](https://github.com/e3w2q/re5-macropad/)
 
 Make example for this keyboard (after setting up your build environment):
 
-    make handwired/re5/rev1:default
+    qmk compile -kb e3w2q/re5/rev1 -km default
 
 Example of flashing this keyboard:
 
-    make handwired/re5/rev1:default:avrdude
+    qmk flash -kb e3w2q/re5/rev1 -km default
 
 Note:  
   Current firmware is **rev1**.

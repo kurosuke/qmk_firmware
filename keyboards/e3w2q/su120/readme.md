@@ -10,11 +10,11 @@ Hardware Availability: [SU120 Repository](https://github.com/e3w2q/su120-keyboar
 
 Make example for this keyboard (after setting up your build environment):
 
-    make handwired/su120/rev1:default
+    qmk compile -kb e3w2q/su120/rev1 -km default
 
 Example of flashing this keyboard:
 
-    make handwired/su120/rev1:default:avrdude
+    qmk flash -kb e3w2q/su120/rev1 -km default
 
 Note:  
   Current firmware is **rev1**.

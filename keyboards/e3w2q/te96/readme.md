@@ -10,11 +10,11 @@ Hardware Availability: [te96 Repository](https://github.com/e3w2q/te96-keyboard/
 
 Make example for this keyboard (after setting up your build environment):
 
-    make handwired/te96/rev1:default
+    qmk compile -kb e3w2q/te96/rev1 -km default
 
 Example of flashing this keyboard:
 
-    make handwired/te96/rev1:default:avrdude
+    qmk flash -kb e3w2q/te96/rev1 -km default
 
 Note:  
   Current firmware is **rev1**.
