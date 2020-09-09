@@ -1,1 +1,0 @@
-# 3x10 ortholinear keyboard for SU120
