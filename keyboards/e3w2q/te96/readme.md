@@ -1,6 +1,6 @@
 # te96
 
-![te96](https://github.com/e3w2q/te96-keyboard/blob/master/image/keypad.jpg?raw=true)
+![te96](https://github.com/e3w2q/te96-keyboard/blob/master/doc/natto48/image/natto48.jpg?raw=true)
 
 Expandable keyboard PCB with a smaller pitch.
 
