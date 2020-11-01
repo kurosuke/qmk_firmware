@@ -15,6 +15,13 @@
  */
 #include QMK_KEYBOARD_H
 
+enum preonic_layers {
+  _QWERTY,
+  _LOWER,
+  _RAISE,
+  _ADJUST
+};
+
 // Defines the keycodes used by our macros in process_record_user
 enum custom_keycodes {
   SEND_00 = SAFE_RANGE,

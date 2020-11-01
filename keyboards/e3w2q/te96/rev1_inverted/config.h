@@ -21,11 +21,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0x1209
-#define PRODUCT_ID      0x4649
+#define PRODUCT_ID      0x4651
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    e3w2q
-#define PRODUCT         SU120
-#define DESCRIPTION     Expandable keyboard with up to 120 keys
+#define PRODUCT         te96
+#define DESCRIPTION     Expandable keyboard PCB with a smaller pitch
 
 /* key matrix size */
 #define MATRIX_ROWS 6*2 //master: 6 rows, slave: 6 rows

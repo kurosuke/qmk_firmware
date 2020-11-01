@@ -1,4 +1,5 @@
 /* Copyright 2019 e3w2q
+ * Modified by soratsuji
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -55,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_H,     KC_M,     KC_J,     KC_O,     KC_E,     XXXXXXX,  
     C(KC_S),  C(KC_C),  KC_B,     KC_P,     C(KC_Z),  XXXXXXX,  
     KC_G,     C(KC_V),  KC_K,     KC_L,     C(KC_Y),  XXXXXXX,  
-    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  
+    XXXXXXX,  KC_SPC,   XXXXXXX,  KC_LBRC,  KC_RBRC,  XXXXXXX,  
     XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  
     XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_HOME,  KC_END,   XXXXXXX,  
 

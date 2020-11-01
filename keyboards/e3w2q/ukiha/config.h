@@ -1,5 +1,5 @@
 /*
-Copyright 2019 e3w2q
+Copyright 2020 e3w2q
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -21,15 +21,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0x1209
-#define PRODUCT_ID      0x4650
+#define PRODUCT_ID      0x4652
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    e3w2q
-#define PRODUCT         RE5
-#define DESCRIPTION     Keyboard with 5 Push Switch Rotary Encoder
+#define PRODUCT         Ukiha
+#define DESCRIPTION     Small key pitch 5x12 ortholinear keyboard
 
 /* key matrix size */
-#define MATRIX_ROWS 1
-#define MATRIX_COLS 5
+#define MATRIX_ROWS 5
+#define MATRIX_COLS 12
 
 /*
  * Keyboard Matrix Assignments
@@ -41,17 +41,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
 */
-#define MATRIX_ROW_PINS { D1 }
-#define MATRIX_COL_PINS { D0, D4, C6, D7, E6 }
+#define MATRIX_ROW_PINS { D2, D1, D0, D4, C6 }
+#define MATRIX_COL_PINS { D7, E6, B4, B5, F4, F5, F6, F7, B1, B3, B2, B6 }
 #define UNUSED_PINS
-
-/* Rotary encoder */
-#define ENCODERS_PAD_A { B6, B3, F7, F5, B5 }
-#define ENCODERS_PAD_B { B2, B1, F6, F4, B4 }
-#define ENCODER_RESOLUTION 4
 
 /* COL2ROW, ROW2COL*/
 #define DIODE_DIRECTION COL2ROW
+
+/*
+ * Split Keyboard specific options, make sure you have 'SPLIT_KEYBOARD = yes' in your rules.mk, and define SOFT_SERIAL_PIN.
+ */
+// #define SOFT_SERIAL_PIN D2 // or D1, D2, D3, E6
 
 // #define BACKLIGHT_PIN B7
 // #define BACKLIGHT_BREATHING
@@ -60,22 +60,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //https://github.com/qmk/qmk_firmware/blob/master/docs/feature_rgblight.md
 #define RGB_DI_PIN D3
 #ifdef RGB_DI_PIN
-  #define RGBLED_NUM 8
+  #define RGBLIGHT_SPLIT
+  #define RGBLED_NUM 12
   #define RGBLIGHT_HUE_STEP 8
   #define RGBLIGHT_SAT_STEP 8
   #define RGBLIGHT_VAL_STEP 8
-  #define RGBLIGHT_LIMIT_VAL 255 /* The maximum brightness level */
+//   #define RGBLIGHT_LIMIT_VAL 255 /* The maximum brightness level */
   #define RGBLIGHT_SLEEP  /* If defined, the RGB lighting will be switched off when the host goes to sleep */
 // /*== all animations enable ==*/
-  #define RGBLIGHT_ANIMATIONS
+//   #define RGBLIGHT_ANIMATIONS
 // /*== or choose animations ==*/
-//   #define RGBLIGHT_EFFECT_BREATHING
-//   #define RGBLIGHT_EFFECT_RAINBOW_MOOD
-//   #define RGBLIGHT_EFFECT_RAINBOW_SWIRL
-//   #define RGBLIGHT_EFFECT_SNAKE
-//   #define RGBLIGHT_EFFECT_KNIGHT
+  #define RGBLIGHT_EFFECT_BREATHING
+  #define RGBLIGHT_EFFECT_RAINBOW_MOOD
+  #define RGBLIGHT_EFFECT_RAINBOW_SWIRL
+  #define RGBLIGHT_EFFECT_SNAKE
+  #define RGBLIGHT_EFFECT_KNIGHT
 //   #define RGBLIGHT_EFFECT_CHRISTMAS
-//   #define RGBLIGHT_EFFECT_STATIC_GRADIENT
+  #define RGBLIGHT_EFFECT_STATIC_GRADIENT
 //   #define RGBLIGHT_EFFECT_RGB_TEST
 //   #define RGBLIGHT_EFFECT_ALTERNATING
 // /*== customize breathing effect ==*/
@@ -87,8 +88,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #endif
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
-//#define DEBOUNCE 5
-#define DEBOUNCING_DELAY 5
+#define DEBOUNCE 5
 
 /* define if matrix has ghost (lacks anti-ghosting diodes) */
 //#define MATRIX_HAS_GHOST
